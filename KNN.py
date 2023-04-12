@@ -34,6 +34,7 @@ class KMeans:
             # calculates the new centroids using the clusters
             centroids_old = self.centroids
             self.centroids = self.get_centroids(self.clusters)
+            #determines whether the old and new centroid are the same
             if self.converges(centroids_old, self.centroids):
                 break
             if self.should_plot:
